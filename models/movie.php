@@ -1,16 +1,16 @@
 <?php
 
-class movie
-{
+class movie{
+
     public $nome;
     public $durata;
-    public $genere;
+    public $type;
 
-    function __construct($nome, $durata, $genere)
+    function __construct($nome, $durata, $type)
     {
         $this->nome = $nome;
         $this->durata = $durata;
-        $this->genere = $genere;
+        $this->type = $type;
     }
 
     public function setName($nuovoName)

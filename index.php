@@ -19,7 +19,25 @@ require_once __DIR__ . '/database/db.php';
 <body>
     <h1>php-oop-1</h1>
 
-    
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nome Film</th>
+                <th scope="col">durata</th>
+                <th scope="col">genere</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($arrayMovies as $elem) { ?>
+                <tr>
+                    <th scope='row'><?php echo $elem->nome ?></th>
+                    <td><?php echo $elem->durata ?></td>
+                    <td><?php echo $elem->type[0]->genere1 . ',' . $elem->type[0]->genere2 ?></td>
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+
 
 
 
